@@ -1,0 +1,5 @@
+dependencies {
+    implementation project(':rag-common')
+    implementation project(':rag-api')
+    implementation project(':rag-core')
+}

@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Application
+application-local.yml
+application-local.properties
+logs/
+
+# Upload
+uploads/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Env
+.env
+.env.local
