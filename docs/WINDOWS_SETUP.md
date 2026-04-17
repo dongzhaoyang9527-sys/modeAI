@@ -162,7 +162,7 @@ npm run dev
 - 尝试重启 Docker Desktop
 
 ### Q: 端口被占用
-- **3306 (MySQL)**: 检查是否已安装本地 MySQL 服务
+- **3307 (Docker MySQL)**: 如果与本地 MySQL 端口冲突，已在 docker-compose.yml 中改为 3307
 - **6379 (Redis)**: 检查是否已安装本地 Redis
 - **8080 (后端)**: 修改 `application.yml` 中的 `server.port`
 - **3000 (前端)**: 修改 `frontend/vite.config.ts` 中的 `server.port`
