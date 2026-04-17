@@ -51,12 +51,20 @@ modeAI/
 
 ## 快速开始
 
-### 环境要求
+### Windows 用户
+
+请参阅 **[Windows 环境安装指南](docs/WINDOWS_SETUP.md)** 获取详细的图文安装步骤。
+
+也可直接双击 `start.bat` 一键启动所有服务。
+
+### Linux/Mac 用户
+
+#### 环境要求
 - JDK 21+
 - Node.js 18+
 - Docker & Docker Compose
 
-### 1. 启动基础设施
+#### 1. 启动基础设施
 
 ```bash
 docker-compose up -d
@@ -64,14 +72,14 @@ docker-compose up -d
 
 这将启动：MySQL 8.0、Redis 7、Milvus 2.4、RabbitMQ 3.13
 
-### 2. 配置环境变量
+#### 2. 配置环境变量
 
 ```bash
-export AI_DASHSCOPE_API_KEY=your_dashscope_api_key
-export JWT_SECRET=your_jwt_secret_at_least_256_bits
+cp .env.example .env
+# 编辑 .env 文件，填入 AI_DASHSCOPE_API_KEY
 ```
 
-### 3. 启动后端
+#### 3. 启动后端
 
 ```bash
 ./gradlew :rag-app:bootRun
@@ -81,7 +89,7 @@ export JWT_SECRET=your_jwt_secret_at_least_256_bits
 
 API 文档: http://localhost:8080/doc.html
 
-### 4. 启动前端
+#### 4. 启动前端
 
 ```bash
 cd frontend
@@ -91,10 +99,14 @@ npm run dev
 
 前端服务运行在 http://localhost:3000
 
-### 5. 默认账号
+#### 5. 默认账号
 
-- 用户名: `admin`
-- 密码: `admin123`
+| 用户名 | 密码 | 角色 |
+|--------|------|------|
+| admin | admin123 | 超级管理员 |
+| zhangsan | 123456 | 普通用户 (技术部) |
+| lisi | 123456 | 文档管理员 (产品部) |
+| wangwu | 123456 | 普通用户 (运营部) |
 
 ## 核心功能
 
